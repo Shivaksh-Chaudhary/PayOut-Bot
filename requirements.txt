@@ -1,0 +1,6 @@
+discord.py
+nextcord
+python-dotenv
+requests
+Pillow
+io
