@@ -11,10 +11,10 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-TOKEN = os.getenv('DISCORD_TOKEN')
-GUILD_ID = int(os.getenv('GUILD_ID'))
-LOG_CHANNEL_ID = int(os.getenv('LOG_CHANNEL_ID'))
-ROLE_IDS = [int(role_id) for role_id in os.getenv('ROLE_IDS').split(',')]
+TOKEN = os.environ.get('DISCORD_TOKEN')
+GUILD_ID = int(os.environ.get('GUILD_ID'))
+LOG_CHANNEL_ID = int(os.environ.get('LOG_CHANNEL_ID'))
+ROLE_IDS = [int(role_id) for role_id in os.environ.get('ROLE_IDS').split(',')]
 
 intents = nextcord.Intents.default()
 intents.messages = True
